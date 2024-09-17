@@ -1,0 +1,82 @@
+/* global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Style for default slick arrows */
+.slick-prev,
+.slick-next {
+  display: none;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+
+/* Add this to your global CSS */
+ul li::marker {
+  font-size: 1rem; /* Set bullet size to be consistent */
+}
+
+
+
+.container {
+  display: flex;
+  width: 100%; /* Adjust as needed */
+  overflow: hidden; /* Hide overflow */
+}
+
+.video-set {
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* Adjust as needed */
+  height: 100%; /* Ensure it covers the full height of the container */
+}
+
+/* Ensure the video aspect ratio stays in the 9:16 format for reels */
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Full height of the container */
+  width: 100%;
+}
+
+/* Maintain aspect ratio */
+video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
+/* Keyframes for continuous upward motion */
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Keyframes for continuous downward motion */
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Apply animation to move elements up smoothly */
+.move-up {
+  animation: moveUp 15s linear infinite;
+}
+
+/* Apply animation to move elements down smoothly */
+.move-down {
+  animation: moveDown 15s linear infinite;
+}
+
