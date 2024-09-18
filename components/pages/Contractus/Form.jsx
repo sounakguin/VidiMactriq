@@ -103,7 +103,7 @@ export default function Form() {
             </div>
           </div>
           <div className="mt-8">
-            <div className="bg-[#EFF6FF] flex flex-col w-[840px] h-28 p-4 rounded-2xl">
+            <div className="bg-[#EFF6FF] flex flex-col w-[762px] h-28 p-4 rounded-2xl">
               <label className="font-normal font-jost pt-1">Address *</label>
               <input
                 type="text"
@@ -116,7 +116,7 @@ export default function Form() {
             </div>
           </div>
           <div className="mt-8">
-            <div className="bg-[#EFF6FF] flex flex-col w-[840px] h-28 p-4 rounded-2xl">
+            <div className="bg-[#EFF6FF] flex flex-col w-[762px] h-28 p-4 rounded-2xl">
               <label className="font-normal font-jost pt-1">
                 Are you interested in? *
               </label>
