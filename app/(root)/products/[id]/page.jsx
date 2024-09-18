@@ -1,27 +1,22 @@
-import Products from "../../../../components/data/Productpage/Products";
-import Image from "next/image";
+import Deals from '@/components/pages/Products/Deals';
+import Header from '@/components/pages/Singleproductpage/Header';
+import Relatableproducts from '@/components/pages/Singleproductpage/Relatableproducts';
+import Specification from '@/components/pages/Singleproductpage/Specification';
+import Superdeals from '@/components/pages/Singleproductpage/Superdeals';
+import Variation from '@/components/pages/Singleproductpage/Variation';
+import React from 'react';
 
-const ProductDetail = ({ params }) => {
-  const { id } = params;
-  const product = Products.find((p) => p.id === parseInt(id));
-
-  if (!product) return <p>Product not found</p>;
-
+// Assuming you're passing the product ID manually for now
+export default function Page({ params }) {
+  const { id } = params; // Or however you're fetching the ID
   return (
-    <div className="mt-20">
-      <div className="container mx-auto px-4 w-11/12">
-        <h1 className="text-2xl font-bold mb-4">{product.Name}</h1>
-        <Image
-          src={product.Image}
-          alt={product.Name}
-          width={100}
-          height={300}
-          className="object-cover mb-4"
-        />
-        <p className="text-lg">{product.Description}</p>
-      </div>
+    <div>
+      <Header />
+      {/* Pass the ID as a prop */}
+      <Variation productId={id} />
+      <Specification />
+      <Superdeals />
+      <Relatableproducts />
     </div>
   );
-};
-
-export default ProductDetail;
+}

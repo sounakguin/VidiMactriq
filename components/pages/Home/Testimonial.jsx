@@ -27,11 +27,11 @@ export default function Testimonial() {
   return (
     <div className="w-11/12 mx-auto p-5">
       <p className="font-bold text-[48px] mt-20 mb-16">Testimonials</p>
-      <div className="border border-red-400 h-[382px]">
+      <div className="h-[382px] ">
         <Carousel
           responsive={responsive}
           infinite={true}
-          autoPlay={false}
+          autoPlay={true}
           autoPlaySpeed={3000}
           arrows={false}
           containerClass="carousel-container"
@@ -41,7 +41,7 @@ export default function Testimonial() {
           {Reviews.map((items, index) => (
             <div
               key={index}
-              className="relative flex flex-col w-[300px] border-2 border-[#60728766] h-[320px] p-4 rounded-2xl mb-4"
+              className="relative flex flex-col w-[300px]  border-2 border-[#60728766] h-[320px] p-4 ml-1 rounded-2xl mb-4"
               style={{
                 boxShadow: "0px 4px 4px 0px #00000040",
               }}
@@ -63,7 +63,7 @@ export default function Testimonial() {
                 className="absolute bottom-0 left-0 right-0 h-[20px] rounded-b-[14px]"
                 style={{
                   backgroundImage: "url('/images/Rectangle.png')",
-                  backgroundSize: "cover", // Cover the bottom area
+                  backgroundSize: "cover", 
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                   zIndex: 2, // Above the vector background but below content
